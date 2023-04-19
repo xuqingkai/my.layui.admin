@@ -14,6 +14,9 @@
 		  .layui-layout-admin .layui-footer{left: 0;}
 		  .layui-layout-admin .layui-side{left: -300px;}
 		}
+		.layui-admin-breadcrumb,.layui-admin-breadcrumb a{color:#fff!important;line-height:60px;}
+		.layui-admin-breadcrumb i{padding:15px;}
+		.layui-admin-breadcrumb span{margin:0 5px;}
 	  </style>
 </head>
 <body>
@@ -22,26 +25,16 @@
   <div class="layui-header">
     <div class="layui-logo layui-hide-xs layui-bg-black">layout demo</div>
     <!-- 头部区域（可配合layui 已有的水平导航） -->
-    <ul class="layui-nav layui-layout-left">
-      <!-- 移动端显示 -->
-      <li class="layui-nav-item" lay-header-event="menuLeft">
-        <i class="layui-icon layui-icon-spread layui-icon-spread-left"></i>
-      </li>
-      
-      <li class="layui-nav-item layui-hide-xs"><a href="">nav 1</a></li>
-      <li class="layui-nav-item layui-hide-xs"><a href="">nav 2</a></li>
-      <li class="layui-nav-item layui-hide-xs"><a href="">nav 3</a></li>
-      <li class="layui-nav-item">
-        <a href="javascript:;">nav groups</a>
-        <dl class="layui-nav-child">
-          <dd><a href="">menu 11</a></dd>
-          <dd><a href="">menu 22</a></dd>
-          <dd><a href="">menu 33</a></dd>
-        </dl>
-      </li>
-      
-      
-    </ul>
+	<div class="layui-layout-left layui-admin-breadcrumb">
+		<span class="layui-breadcrumb">
+		  <i class="layui-icon layui-icon-spread layui-icon-spread-left" lay-header-event="menuLeft"></i>
+		  <a href="">首页</a>
+		  <a href="">国际新闻</a>
+		  <a href="">亚太地区</a>
+		  <a><cite>正文</cite></a>
+		</span>  
+	</div>
+
     <ul class="layui-nav layui-layout-right">
       <li class="layui-nav-item layui-hide layui-show-md-inline-block">
         <a href="javascript:;">
